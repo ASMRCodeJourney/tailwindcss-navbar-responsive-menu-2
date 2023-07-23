@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar #2</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="bg-gray-300 min-h-screen">
+      <header class="bg-white/90 border-b border-gray-200">
+        <div
+          class="container mx-auto p-5 flex flex-col xl:flex-row gap-4 justify-between xl:justify-center xl:items-center"
+        >
+          <!-- Logo -->
+          <div class="basis-1/6 flex justify-between items-center">
+            <a href="">
+              <div class="flex gap-2 items-center justify-center">
+                <svg
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 25 27"
+                  class="flex-shrink-0 h-5 -mt-2 2xl:h-7 2xl:w-7"
+                >
+                  <path
+                    d="M22.487.658s5.03 13.072-1.822 22.171C16.476 28.39 9.84 27.26 5.484 25.68c1.513-3.391 3.441-6.067 5.784-8.03 1.176.623 3.186.792 6.03.51-2.535-.221-4.284-.654-5.246-1.3l.125.08c2.122-1.546 4.556-2.556 7.303-3.029-3.16-.285-6.026.315-8.598 1.804-.577-.742-1.157-1.748-1.74-3.018.07 1.534.339 2.734.809 3.6-2.64 1.797-4.953 4.58-6.94 8.351a7.583 7.583 0 01-.188-.088c-.802-.358-1.328-1.037-1.755-2.036C-1.9 13.366 4.645 8.273 11.123 7.989 23.046 7.465 22.487.658 22.487.658z"
+                    fill="#0ED3CF"
+                  ></path>
+                </svg>
+                <p>Tailwindcomponents</p>
+              </div>
+            </a>
+            <!-- Button mobile -->
+            <div class="xl:hidden">
+              <button id="btn-mobile">
+                <svg
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="w-6 h-6 text-gray-700 dark:text-gray-300"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- Menu -->
+          <div class="basis-3/6">
+            <!-- Menu Mobile -->
+            <div class="hidden flex flex-col gap-2 py-3 ml-4" id="menu-mobile">
+              <a href="" class="text-gray-400 hover:text-black">Components</a>
+              <a href="" class="text-gray-400 hover:text-black">Premium</a>
+              <a href="" class="text-gray-400 hover:text-black">Cheatsheet</a>
+              <a href="" class="text-gray-400 hover:text-black"
+                >Gradient generator</a
+              >
+              <a href="" class="text-gray-400 hover:text-black">Ecosystem</a>
+            </div>
+            <!-- Menu desktop -->
+            <div class="hidden xl:flex gap-8 text-gray-500 justify-between">
+              <!-- Components -->
+              <div class="relative">
+                <div
+                  class="flex items-center group hover:cursor-pointer"
+                  id="components"
+                >
+                  <span class="group-hover:text-black"> Components</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-5 h-5 group-hover:text-black"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+
+                <!-- Sub menu -->
+                <div
+                  id="sub-menu-components"
+                  class="hidden absolute left-0 bg-white w-[500px] z-40 px-2 py-1 rounded-lg border mt-2"
+                >
+                  <a href="" class="px-3 hover:underline text-black"
+                    >All Components</a
+                  >
+                  <div
+                    class="grid grid-cols-3 mt-2 overflow-y-auto max-h-[75vh] gap-x-4"
+                  >
+                    <!-- Col 1 -->
+                    <div
+                      class="flex flex-col gap-2 pr-4 border-r border-r-gray-100"
+                    >
+                      <a
+                        href=""
+                        class="flex justify-between items-center px-3 py-1 rounded-lg hover:bg-gray-100"
+                        >Awesome <span>60</span></a
+                      >
+                      <a
+                        href=""
+                        class="flex justify-between items-center px-3 py-1 rounded-lg hover:bg-gray-100"
+                        >Accordions <span>60</span></a
+                      >
+                      <a
+                        href=""
+                        class="flex justify-between items-center px-3 py-1 rounded-lg hover:bg-gray-100"
+                        >Alert <span>60</span></a
+                      >
+                      <a
+                        href=""
+                        class="flex justify-between items-center px-3 py-1 rounded-lg hover:bg-gray-100"
+                        >Alpinejs <span>60</span></a
+                      >
+                      <a
+                        href=""
+                        class="flex justify-between items-center px-3 py-1 rounded-lg hover:bg-gray-100"
+                        >Awesome <span>60</span></a
+                      >
+                    </div>
+                    <!-- Col 2 -->
+                    <div
+                      class="flex flex-col gap-2 pr-4 border-r border-r-gray-100"
+                    >
+                      <a
+                        href=""
+                        class="flex justify-between items-center px-3 py-1 rounded-lg hover:bg-gray-100"
+                        >Awesome <span>60</span></a
+                      >
+                      <a
+                        href=""
+                        class="flex justify-between items-center px-3 py-1 rounded-lg hover:bg-gray-100"
+                        >Accordions <span>60</span></a
+                      >
+                      <a
+                        href=""
+                        class="flex justify-between items-center px-3 py-1 rounded-lg hover:bg-gray-100"
+                        >Alert <span>60</span></a
+                      >
+                      <a
+                        href=""
+                        class="flex justify-between items-center px-3 py-1 rounded-lg hover:bg-gray-100"
+                        >Alpinejs <span>60</span></a
+                      >
+                      <a
+                        href=""
+                        class="flex justify-between items-center px-3 py-1 rounded-lg hover:bg-gray-100"
+                        >Awesome <span>60</span></a
+                      >
+                    </div>
+                    <!-- Col 3 -->
+                    <div
+                      class="flex flex-col gap-2 pr-4 border-r border-r-gray-100"
+                    >
+                      <a
+                        href=""
+                        class="flex justify-between items-center px-3 py-1 rounded-lg hover:bg-gray-100"
+                        >Awesome <span>60</span></a
+                      >
+                      <a
+                        href=""
+                        class="flex justify-between items-center px-3 py-1 rounded-lg hover:bg-gray-100"
+                        >Accordions <span>60</span></a
+                      >
+                      <a
+                        href=""
+                        class="flex justify-between items-center px-3 py-1 rounded-lg hover:bg-gray-100"
+                        >Alert <span>60</span></a
+                      >
+                      <a
+                        href=""
+                        class="flex justify-between items-center px-3 py-1 rounded-lg hover:bg-gray-100"
+                        >Alpinejs <span>60</span></a
+                      >
+                      <a
+                        href=""
+                        class="flex justify-between items-center px-3 py-1 rounded-lg hover:bg-gray-100"
+                        >Awesome <span>60</span></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="">Premium</a>
+              <a href="">Cheatsheet</a>
+              <a href="">Gradient</a>
+              <a href="">Generator</a>
+              <!-- Ecosystem -->
+              <div class="relative">
+                <div
+                  class="flex items-center group hover:cursor-pointer"
+                  id="ecosystem"
+                >
+                  <span class="group-hover:text-black"> Ecosystem</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-5 h-5 group-hover:text-black"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+
+                <!-- Sub menu -->
+                <div
+                  id="sub-menu-ecosystem"
+                  class="hidden absolute right-0 bg-white w-60 max-h-96 px-2 py-2 rounded-lg border"
+                >
+                  <a
+                    href=""
+                    class="flex justify-between items-center px-2 py-3 hover:bg-gray-100"
+                    ><span> Material Tailwind</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-4 h-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                      ></path>
+                    </svg>
+                  </a>
+
+                  <a
+                    href=""
+                    class="flex justify-between items-center px-2 py-3 hover:bg-gray-100"
+                    ><span> Material Tailwind</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-4 h-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                      ></path>
+                    </svg>
+                  </a>
+
+                  <a
+                    href=""
+                    class="flex justify-between items-center px-2 py-3 hover:bg-gray-100"
+                    ><span> Material Tailwind</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-4 h-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Button -->
+          <div
+            id="menu-right"
+            class="basis-2/6 hidden xl:flex xl:flex-row flex-col gap-4 xl:items-center justify-end ml-3 xl:ml-0"
+          >
+            <a href="#" class="text-gray-400 mr-2 hover:text-black">Blog</a>
+            <form action="">
+              <input
+                type="text"
+                placeholder="Search..."
+                class="w-full xl:w-32 xl:focus:w-36 px-8 py-2 focus:outline-none rounded-lg border transition-all duration-200 focus:ring focus:ring-green-500/20"
+              />
+            </form>
+            <a
+              href="#"
+              class="px-8 py-2 rounded-lg bg-[#0ed3cf] text-white hover:opacity-80"
+              >Submit</a
+            >
+            <a
+              href="#"
+              class="px-8 py-2 rounded-lg bg-gray-200 hover:opacity-80"
+              >Login</a
+            >
+          </div>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
